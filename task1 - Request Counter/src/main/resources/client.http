@@ -1,0 +1,21 @@
+GET http://localhost:8080/api/requests
+###
+GET http://localhost:8080/api/requests
+###
+GET http://localhost:8080/api/requests
+###
+POST http://localhost:8080/api/requests
+###
+POST http://localhost:8080/api/requests
+###
+POST http://localhost:8080/api/requests
+###
+PATCH http://localhost:8080/api/requests
+###
+DELETE http://localhost:8080/api/requests
+###
+DELETE http://localhost:8080/api/requests
+###
+PUT http://localhost:8080/api/requests
+###
+GET http://localhost:8080/api/statistics
