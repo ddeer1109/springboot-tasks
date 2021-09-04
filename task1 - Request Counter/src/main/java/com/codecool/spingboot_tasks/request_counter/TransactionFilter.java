@@ -1,4 +1,4 @@
-package com.codecool.springboot_tasks.filter;
+package com.codecool.spingboot_tasks.request_counter;
 
 import com.codecool.spingboot_tasks.request_counter.RequestCounterApplication;
 import com.codecool.spingboot_tasks.request_counter.service.RequestCountStatsService;
@@ -17,12 +17,17 @@ public class TransactionFilter implements Filter {
 
     RequestCountStatsService requestService;
 
-    @Override
     @Autowired
+    public TransactionFilter(RequestCountStatsService requestService) {
+        this.requestService = requestService;
+    }
+
+    @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
 
         System.out.println("Hello Filter");
+        System.out.println(request.getMethod());
         filterChain.doFilter(request, servletResponse);
         System.out.println("Bye, from Filter");
 
