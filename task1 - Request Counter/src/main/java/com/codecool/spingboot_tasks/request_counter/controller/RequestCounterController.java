@@ -23,26 +23,31 @@ public class RequestCounterController {
 
     @GetMapping("/api/requests")
     public ResponseEntity<Void> get() throws InterruptedException {
+        service.increaseCounter(RequestCountStatsService.GET);
         return ResponseEntity.ok().build();
     }
 
     @PostMapping("/api/requests")
     public ResponseEntity<Void> post() {
+        service.increaseCounter(RequestCountStatsService.POST);
         return ResponseEntity.ok().build();
     }
 
     @PutMapping("/api/requests")
     public ResponseEntity<Void> put() {
+        service.increaseCounter(RequestCountStatsService.PUT);
         return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/api/requests")
     public ResponseEntity<Void> delete() {
+        service.increaseCounter(RequestCountStatsService.DELETE);
         return ResponseEntity.ok().build();
     }
 
     @PatchMapping("/api/requests")
     public ResponseEntity<Void> patch() {
+        service.increaseCounter(RequestCountStatsService.PATCH);
         return ResponseEntity.ok().build();
     }
 
